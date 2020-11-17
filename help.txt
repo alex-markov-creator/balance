@@ -1,7 +1,7 @@
 balance version 0.0.6a
 author: a.bezzubov 26/09/2020
 
-Комманда:
+Команда:
 
 Клавиша <1> на клавиатуре и <ENTER>:
 Чтение файла info.txt.
