@@ -42,7 +42,13 @@ class Intro(object):
         return self.version
 
     def today_time(self):
-        locale.setlocale(locale.LC_ALL, "Russian_Russia.1251")
+        if sys.platform == "linux" or platform == "linux2":
+            locale.setlocale(locale.LC_ALL, "ru_RU.utf8") # Linux
+        elif sys.platform == "darwin":
+            pass
+        elif platform == "win32":
+            locale.setlocale(locale.LC_ALL, "Russian_Russia.1251") # Windows
+
         self._s = "Сегодня:\n%A %d %b %Y %H:%M:%S\n%d.%m.%Y"
         return time.strftime(self._s)
 
