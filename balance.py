@@ -385,7 +385,7 @@ class ArchiveCommand(BaseCommand):
         """
         file = 'archive.txt'
         numlines = 30
-        text = open(file).read()
+        text = open(file, encoding='1251').read()
         lines = text.splitlines() # подобно split('\n'), но без '' в конце
         while lines:
             chunk = lines[:numlines]
@@ -422,7 +422,7 @@ class HelpCommand(BaseCommand):
         """
         file = 'help.txt'
         numlines = 30
-        text = open(file).read()
+        text = open(file, encoding='1251').read()
         lines = text.splitlines() # подобно split('\n'), но без '' в конце
         while lines:
             chunk = lines[:numlines]
