@@ -5,7 +5,8 @@
 author: a.bezzubov
 data: 26/09/2020 year
 
-balance.py -  файл запуска консольного приложения для просмотра и редактирования базы данных записей изменений в счетах балансовых ресурсов.
+balance.py -  файл запуска консольного приложения для просмотра
+и редактирования базы данных записей изменений в счетах балансовых ресурсов.
 
 1 - Информация - чтение файла info.txt;
 2 - БД - база данных на экран;
@@ -422,7 +423,7 @@ class HelpCommand(BaseCommand):
         """
         file = 'help.txt'
         numlines = 30
-        text = open(file, encoding='1251').read()
+        text = open(file, encoding='utf-8').read()
         lines = text.splitlines() # подобно split('\n'), но без '' в конце
         while lines:
             chunk = lines[:numlines]
